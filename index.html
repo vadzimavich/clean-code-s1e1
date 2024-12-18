@@ -6,50 +6,50 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="page">
-    <header class="page__header header">
+    <header class="header">
       <img class="header__img" src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix">
       <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <main class="page__main main">
-      <section id="add-task" class="main__new-task new-task">
+    <main class="main">
+      <section id="add-task" class="new-task">
         <h3 class="new-task__title">Add Item</h3>
         <div class="new-task__wrapper">
           <input type="text" id="new-task" class="new-task__input">
-          <button class="new-task__button">Add</button>
+          <button class="new-task__btn">Add</button>
         </div>
       </section>
-      <section id="incomplete-tasks" class="main__tasks tasks" >
+      <section id="incomplete-tasks" class="tasks">
         <h3 class="tasks__title">Todo</h3>
         <ul class="tasks__list">
           <li class="tasks__item task">
             <input type="checkbox" class="task__checkbox">
             <label class="task__label">Pay Bills</label>
             <input type="text" class="task__input">
-            <button class="task__button task__button_type_edit">Edit</button>
-            <button class="task__button task__button_type_delete">
-              <img src="./remove.svg" class="task__delete-icon" alt="Remove Icon">
+            <button class="task__btn task__btn_edit">Edit</button>
+            <button class="task__btn task__btn_del">
+              <img src="./remove.svg" class="task__del-icon" alt="Remove Icon">
             </button>
           </li>
-          <li class="tasks__item task task_state_edit">
+          <li class="tasks__item task task_edit">
             <input type="checkbox" class="task__checkbox">
             <label class="task__label">Go Shopping</label>
             <input type="text" value="Go Shopping" class="task__input">
-            <button class="task__button task__button_type_edit">Save</button>
-            <button class="task__button task__button_type_delete">
-              <img src="./remove.svg" class="task__delete-icon" alt="Remove Icon">
+            <button class="task__btn task__btn_edit">Save</button>
+            <button class="task__btn task__btn_del">
+              <img src="./remove.svg" class="task__del-icon" alt="Remove Icon">
             </button>
           </li>
         </ul>
-      <section id="completed-tasks" class="main__tasks tasks tasks_type_completed">
+      <section id="completed-tasks" class="tasks tasks_completed">
         <h3 class="tasks__title">Completed</h3>
         <ul class="tasks__list">
           <li class="tasks__item task">
             <input type="checkbox" class="task__checkbox" checked>
             <label class="task__label">See the Doctor</label>
             <input type="text" class="task__input">
-            <button class="task__button task__button_type_edit">Edit</button>
-            <button class="task__button task__button_type_delete">
-              <img src="./remove.svg" class="task__delete-icon" alt="Remove Icon">
+            <button class="task__btn task__btn_edit">Edit</button>
+            <button class="task__btn task__btn_del">
+              <img src="./remove.svg" class="task__del-icon" alt="Remove Icon">
             </button>
           </li>
         </ul>

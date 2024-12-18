@@ -10,7 +10,7 @@ alert("Sorry, wrong link. The PR is here: https://github.com/vadzimavich/clean-c
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.querySelector(".new-task__input");//Add a new task.
-var addButton=document.querySelector(".new-task__button");//first button
+var addButton=document.querySelector(".new-task__btn");//first button
 var incompleteTaskHolder=document.querySelector("#incomplete-tasks .tasks__list");//ul of #incomplete-tasks
 var completedTasksHolder=document.querySelector("#completed-tasks .tasks__list");//completed-tasks
 
@@ -34,13 +34,13 @@ var createNewTaskElement=function(taskString){
   //button.edit
   var editButton=document.createElement("button");//edit button
   editButton.innerText="Edit"; 
-  editButton.className="task__button task__button_type_edit";
+  editButton.className="task__btn task__btn_edit";
   //button.delete
   var deleteButton=document.createElement("button");//delete button
-  deleteButton.className="task__button task__button_type_delete";
+  deleteButton.className="task__btn task__btn_del";
   var deleteButtonImg=document.createElement("img");//delete button image
   deleteButtonImg.src="./remove.svg";
-  deleteButtonImg.className = "task__delete-icon";
+  deleteButtonImg.className = "task__del-icon";
   deleteButtonImg.alt = "Remove Icon";
   deleteButton.appendChild(deleteButtonImg);
 
@@ -78,8 +78,8 @@ var editTask=function(){
 
   var editInput=listItem.querySelector(".task__input");
   var label=listItem.querySelector(".task__label");
-  var editBtn=listItem.querySelector(".task__button_type_edit");
-  var containsClass=listItem.classList.contains("task_state_edit");
+  var editBtn=listItem.querySelector(".task__btn_edit");
+  var containsClass=listItem.classList.contains("task_edit");
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -92,7 +92,7 @@ var editTask=function(){
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("task_state_edit");
+  listItem.classList.toggle("task_edit");
 }
 
 //Delete task.
@@ -140,8 +140,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
   var checkBox=taskListItem.querySelector(".task__checkbox");
-  var editButton=taskListItem.querySelector(".task__button_type_edit");
-  var deleteButton=taskListItem.querySelector(".task__button_type_delete");
+  var editButton=taskListItem.querySelector(".task__btn_edit");
+  var deleteButton=taskListItem.querySelector(".task__btn_del");
 
   //Bind editTask to edit button.
   editButton.onclick=editTask;
