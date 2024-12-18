@@ -1,3 +1,4 @@
+alert("Sorry, wrong link. The PR is here: https://github.com/vadzimavich/clean-code-s1e1/pull/1")
 //Document is the DOM can be accessed in the console with document.window.
 // Tree is from the top, html, body, p etc.
 
